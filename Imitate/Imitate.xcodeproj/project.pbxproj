@@ -14,6 +14,7 @@
 		BA689C091EF23CBA009B73BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA689C071EF23CBA009B73BE /* LaunchScreen.storyboard */; };
 		BA689C141EF23CBA009B73BE /* ImitateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C131EF23CBA009B73BE /* ImitateTests.swift */; };
 		BA689C1F1EF23FC7009B73BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C1E1EF23FC7009B73BE /* GameViewController.swift */; };
+		BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */; };
 		BABFB67C1F0C49EE0097A69A /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABFB67B1F0C49EE0097A69A /* NavViewController.swift */; };
 		BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		BA689C131EF23CBA009B73BE /* ImitateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImitateTests.swift; sourceTree = "<group>"; };
 		BA689C151EF23CBA009B73BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA689C1E1EF23FC7009B73BE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		BABFB67B1F0C49EE0097A69A /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIOutlinedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,13 +87,10 @@
 			children = (
 				BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */,
 				BA689C051EF23CBA009B73BE /* Assets.xcassets */,
-				BA689C1E1EF23FC7009B73BE /* GameViewController.swift */,
 				BA689C0A1EF23CBA009B73BE /* Info.plist */,
-				BA689C071EF23CBA009B73BE /* LaunchScreen.storyboard */,
-				BA689C021EF23CBA009B73BE /* Main.storyboard */,
-				BABFB67B1F0C49EE0097A69A /* NavViewController.swift */,
-				BA689C001EF23CBA009B73BE /* StartViewController.swift */,
+				BA8453EE1F0F31B800B3B995 /* Storyboards */,
 				BADBC2861EFE1204002BB1A9 /* Util */,
+				BA8453EF1F0F31D000B3B995 /* ViewControllers */,
 			);
 			path = Imitate;
 			sourceTree = "<group>";
@@ -103,6 +102,26 @@
 				BA689C151EF23CBA009B73BE /* Info.plist */,
 			);
 			path = ImitateTests;
+			sourceTree = "<group>";
+		};
+		BA8453EE1F0F31B800B3B995 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA689C021EF23CBA009B73BE /* Main.storyboard */,
+				BA689C071EF23CBA009B73BE /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BA8453EF1F0F31D000B3B995 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA689C001EF23CBA009B73BE /* StartViewController.swift */,
+				BABFB67B1F0C49EE0097A69A /* NavViewController.swift */,
+				BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */,
+				BA689C1E1EF23FC7009B73BE /* GameViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BADBC2861EFE1204002BB1A9 /* Util */ = {
@@ -222,6 +241,7 @@
 				BABFB67C1F0C49EE0097A69A /* NavViewController.swift in Sources */,
 				BA689C1F1EF23FC7009B73BE /* GameViewController.swift in Sources */,
 				BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */,
+				BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */,
 				BA689BFF1EF23CBA009B73BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

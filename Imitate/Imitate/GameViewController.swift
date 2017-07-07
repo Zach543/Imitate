@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
     var userBtnPresses = [UIButton]()
     let maxPatterns = 100
     var nextIndex = 0
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -205,6 +206,15 @@ class GameViewController: UIViewController {
         UIView.animate(withDuration: 1.5, animations: {
             self.view.backgroundColor = UIColor.red
         }, completion: {_ in
+            var leaderboardDict = [String : Int]()
+            if let array = self.userDefaults.dictionary(forKey: "Leaderboard") as? [String : Int] {
+                leaderboardDict = array
+            }
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm:ss MM/dd/yyyy"
+            let currentDate = formatter.string(from: Date())
+            leaderboardDict[currentDate] = self.nextIndex - 1
+            self.userDefaults.set(leaderboardDict, forKey: "Leaderboard")
             complete(true)
         })
     }
