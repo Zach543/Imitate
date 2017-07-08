@@ -167,6 +167,7 @@ class GameViewController: UIViewController {
                 showError(complete: {_ in
                     self.navigationController?.popViewController(animated: true)
                 })
+                return
             }
         }
         if !valid {
@@ -211,9 +212,9 @@ class GameViewController: UIViewController {
                 leaderboardDict = array
             }
             let formatter = DateFormatter()
-            formatter.dateFormat = "HH:mm:ss MM/dd/yyyy"
+            formatter.dateFormat = "MM/dd/yyyy h:mma"
             let currentDate = formatter.string(from: Date())
-            leaderboardDict[currentDate] = self.nextIndex - 1
+            leaderboardDict[currentDate] = self.nextIndex
             self.userDefaults.set(leaderboardDict, forKey: "Leaderboard")
             complete(true)
         })

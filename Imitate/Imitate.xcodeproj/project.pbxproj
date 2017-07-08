@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA39A1A31F1154B5001A4608 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */; };
 		BA689BFF1EF23CBA009B73BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */; };
 		BA689C011EF23CBA009B73BE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C001EF23CBA009B73BE /* StartViewController.swift */; };
 		BA689C041EF23CBA009B73BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA689C021EF23CBA009B73BE /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		BA689BFB1EF23CBA009B73BE /* Imitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA689C001EF23CBA009B73BE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA39A1A11F115490001A4608 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BA689BF21EF23CBA009B73BE = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 				BA8453EE1F0F31B800B3B995 /* Storyboards */,
 				BADBC2861EFE1204002BB1A9 /* Util */,
 				BA8453EF1F0F31D000B3B995 /* ViewControllers */,
+				BA39A1A11F115490001A4608 /* Views */,
 			);
 			path = Imitate;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 				BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */,
 				BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */,
 				BA689BFF1EF23CBA009B73BE /* AppDelegate.swift in Sources */,
+				BA39A1A31F1154B5001A4608 /* LeaderboardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
