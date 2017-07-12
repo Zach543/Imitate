@@ -46,7 +46,7 @@ extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource 
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
-        let duration: Double = 0.5
+        let duration: Double = 0.3
         let delay = Double(indexPath.row) * (duration / 2)
         let transform = CATransform3DTranslate(CATransform3DIdentity, cell.frame.width, 0, 0)
         cell.layer.transform = transform

@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
     
     var userPlaying = false
     var userBtnPresses = [UIButton]()
-    let maxPatterns = 100
+    let maxAmount = 1000
     var nextIndex = 0
     let userDefaults = UserDefaults.standard
     
@@ -34,15 +34,20 @@ class GameViewController: UIViewController {
     }
     
     private func loadPatterns() {
-        var btnAmount = 2
-        for _ in 0...maxPatterns {
+        var btnAmount = 3
+        let levels = 3
+        var multiplier = 1
+        for stage in 1...maxAmount {
             var newBtnPattern = [UIButton]()
             for _ in 1...btnAmount {
                 let btnNum = arc4random_uniform(4) + 1
                 newBtnPattern += [getBtn(number: Int(btnNum))]
             }
             patterns += [newBtnPattern]
-            btnAmount += 1
+            if multiplier * levels == stage {
+                btnAmount += 1
+                multiplier += 2
+            }
         }
     }
     
