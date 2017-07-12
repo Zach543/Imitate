@@ -127,10 +127,10 @@
 		BA8453EF1F0F31D000B3B995 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA689C001EF23CBA009B73BE /* StartViewController.swift */,
-				BABFB67B1F0C49EE0097A69A /* NavViewController.swift */,
-				BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */,
 				BA689C1E1EF23FC7009B73BE /* GameViewController.swift */,
+				BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */,
+				BABFB67B1F0C49EE0097A69A /* NavViewController.swift */,
+				BA689C001EF23CBA009B73BE /* StartViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

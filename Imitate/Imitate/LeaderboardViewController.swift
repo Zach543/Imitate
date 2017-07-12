@@ -11,11 +11,13 @@ import UIKit
 class LeaderboardViewController: UIViewController {
     var leaderboardValues = [String : Int]()
     let userDefaults = UserDefaults.standard
+    var shownIndexes : [IndexPath] = []
+
     @IBOutlet weak var leaderboardTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Personal Leaderboard"
+        navigationItem.title = "Your Leaderboard"
         leaderboardTable.delegate = self
         leaderboardTable.dataSource = self
     }
@@ -23,7 +25,7 @@ class LeaderboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         leaderboardValues = userDefaults.dictionary(forKey: "Leaderboard") as? [String : Int] ?? [String : Int]()
     }
-
+    
 }
 
 extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,6 +42,18 @@ extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource 
         cell.date.text = sortedKeys[indexPath.row]
         cell.level.text = String(describing: leaderboardValues[sortedKeys[indexPath.row]]!)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        let duration: Double = 0.5
+        let delay = Double(indexPath.row) * (duration / 2)
+        let transform = CATransform3DTranslate(CATransform3DIdentity, cell.frame.width, 0, 0)
+        cell.layer.transform = transform
+        UIView.animate(withDuration: duration, delay: delay, animations: {
+            cell.alpha = 1
+            cell.layer.transform = CATransform3DIdentity
+        })
     }
     
     private func sortedLeaderboardKeys() -> Array<String> {

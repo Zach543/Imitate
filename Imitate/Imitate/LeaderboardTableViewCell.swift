@@ -15,6 +15,19 @@ class LeaderboardTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+//        date.alpha = 0
+//        level.alpha = 0
+    }
+    
+    func animateLabels() {
+        date.alpha = 0
+        level.alpha = 0
+        UIView.animate(withDuration: 1.0, animations: {
+            self.date.alpha = 1
+            self.level.alpha = 1
+        }, completion: {_ in
+            
+        })
     }
 
 }
