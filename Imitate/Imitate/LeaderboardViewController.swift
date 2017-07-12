@@ -12,6 +12,7 @@ class LeaderboardViewController: UIViewController {
     var leaderboardValues = [String : Int]()
     let userDefaults = UserDefaults.standard
     var shownIndexes : [IndexPath] = []
+    var filteredKeys = Array<String>()
 
     @IBOutlet weak var leaderboardTable: UITableView!
     
@@ -26,6 +27,14 @@ class LeaderboardViewController: UIViewController {
         leaderboardValues = userDefaults.dictionary(forKey: "Leaderboard") as? [String : Int] ?? [String : Int]()
     }
     
+    @IBAction func filterToggled(_ sender: UIButton) {
+        filteredKeys = []
+        for (k,_) in (Array(leaderboardValues).sorted {$0.1 > $1.1}) {
+            filteredKeys.append(k)
+        }
+        leaderboardTable.reloadData()
+    }
+    
 }
 
 extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,9 +47,14 @@ extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = leaderboardTable.dequeueReusableCell(withIdentifier: "leaderboardCell") as! LeaderboardTableViewCell
         cell.date.text = nil
         cell.level.text = nil
-        let sortedKeys = sortedLeaderboardKeys()
-        cell.date.text = sortedKeys[indexPath.row]
-        cell.level.text = String(describing: leaderboardValues[sortedKeys[indexPath.row]]!)
+        var keys = Array<String>()
+        if filteredKeys.isEmpty {
+            keys = sortedLeaderboardKeys()
+        } else {
+            keys = filteredKeys
+        }
+        cell.date.text = keys[indexPath.row]
+        cell.level.text = String(describing: leaderboardValues[keys[indexPath.row]]!)
         return cell
     }
 
