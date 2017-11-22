@@ -16,6 +16,8 @@
 		BA689C141EF23CBA009B73BE /* ImitateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C131EF23CBA009B73BE /* ImitateTests.swift */; };
 		BA689C1F1EF23FC7009B73BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C1E1EF23FC7009B73BE /* GameViewController.swift */; };
 		BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */; };
+		BABC07E81FA81A32001287CA /* ZKModalStatusTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */; };
+		BABC07E91FA81A32001287CA /* ZKModalStatusTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BABFB67C1F0C49EE0097A69A /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABFB67B1F0C49EE0097A69A /* NavViewController.swift */; };
 		BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */; };
 /* End PBXBuildFile section */
@@ -28,7 +30,42 @@
 			remoteGlobalIDString = BA689BFA1EF23CBA009B73BE;
 			remoteInfo = Imitate;
 		};
+		BABC07E11FA81962001287CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BABC07BE1FA81307001287CA;
+			remoteInfo = ZKModalStatusTest;
+		};
+		BABC07E31FA81962001287CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BABC07C71FA81307001287CA;
+			remoteInfo = ZKModalStatusTestTests;
+		};
+		BABC07EA1FA81A32001287CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BABC07BD1FA81307001287CA;
+			remoteInfo = ZKModalStatusTest;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BABC07EC1FA81A32001287CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BABC07E91FA81A32001287CA /* ZKModalStatusTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -44,6 +81,7 @@
 		BA689C151EF23CBA009B73BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA689C1E1EF23FC7009B73BE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZKModalStatusTest.xcodeproj; path = ../../../Frameworks/Test/ZKModalStatusTest/ZKModalStatusTest.xcodeproj; sourceTree = "<group>"; };
 		BABFB67B1F0C49EE0097A69A /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIOutlinedLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABC07E81FA81A32001287CA /* ZKModalStatusTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +116,7 @@
 		BA689BF21EF23CBA009B73BE = {
 			isa = PBXGroup;
 			children = (
+				BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */,
 				BA689BFD1EF23CBA009B73BE /* Imitate */,
 				BA689C121EF23CBA009B73BE /* ImitateTests */,
 				BA689BFC1EF23CBA009B73BE /* Products */,
@@ -135,6 +175,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		BABC07DD1FA81962001287CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */,
+				BABC07E41FA81962001287CA /* ZKModalStatusTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BADBC2861EFE1204002BB1A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,10 +202,12 @@
 				BA689BF71EF23CBA009B73BE /* Sources */,
 				BA689BF81EF23CBA009B73BE /* Frameworks */,
 				BA689BF91EF23CBA009B73BE /* Resources */,
+				BABC07EC1FA81A32001287CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BABC07EB1FA81A32001287CA /* PBXTargetDependency */,
 			);
 			name = Imitate;
 			productName = Imitate;
@@ -215,6 +266,12 @@
 			mainGroup = BA689BF21EF23CBA009B73BE;
 			productRefGroup = BA689BFC1EF23CBA009B73BE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BABC07DD1FA81962001287CA /* Products */;
+					ProjectRef = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BA689BFA1EF23CBA009B73BE /* Imitate */,
@@ -222,6 +279,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZKModalStatusTest.framework;
+			remoteRef = BABC07E11FA81962001287CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BABC07E41FA81962001287CA /* ZKModalStatusTestTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZKModalStatusTestTests.xctest;
+			remoteRef = BABC07E31FA81962001287CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BA689BF91EF23CBA009B73BE /* Resources */ = {
@@ -273,6 +347,11 @@
 			isa = PBXTargetDependency;
 			target = BA689BFA1EF23CBA009B73BE /* Imitate */;
 			targetProxy = BA689C101EF23CBA009B73BE /* PBXContainerItemProxy */;
+		};
+		BABC07EB1FA81A32001287CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZKModalStatusTest;
+			targetProxy = BABC07EA1FA81A32001287CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,9 +471,11 @@
 		BA689C191EF23CBA009B73BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZSMYYZ8XQ8;
 				INFOPLIST_FILE = Imitate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.Imitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,9 +486,11 @@
 		BA689C1A1EF23CBA009B73BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZSMYYZ8XQ8;
 				INFOPLIST_FILE = Imitate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.Imitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

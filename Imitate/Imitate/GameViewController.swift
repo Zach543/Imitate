@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZKModalStatusTest
 
 class GameViewController: UIViewController {
 
@@ -209,8 +210,15 @@ class GameViewController: UIViewController {
         self.btn4.alpha = 0
         disableBtns()
         self.animateLabel(text: "Failure!", innerColor: UIColor.white, complete: {_ in})
-        UIView.animate(withDuration: 1.5, animations: {
-            self.view.backgroundColor = UIColor.red
+        
+//        let modalView = ZKModalStatusView(frame: self.view.bounds)
+//        modalView.set(image: #imageLiteral(resourceName: "trophy"))
+//        modalView.set(headline: "Congrats")
+//        modalView.set(subheading: "You've got a new high score!")
+//        view.addSubview(modalView)
+
+        UIView.animate(withDuration: 1.5, delay: 2, animations: {
+            self.view.backgroundColor = UIColor.blue
         }, completion: {_ in
             var leaderboardDict = [String : Int]()
             if let array = self.userDefaults.dictionary(forKey: "Leaderboard") as? [String : Int] {
