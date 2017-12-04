@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA2B0E931FCCA5AF00FACFBE /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2B0E921FCCA5AF00FACFBE /* FirestoreModel.swift */; };
 		BA39A1A31F1154B5001A4608 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */; };
+		BA3B19C11FC5F6EA00ED9D5B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B19C01FC5F6EA00ED9D5B /* UIViewController+Extension.swift */; };
+		BA3B19C31FC6148600ED9D5B /* CustomAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B19C21FC6148600ED9D5B /* CustomAuthPickerViewController.swift */; };
+		BA5B6FA31FCE030500D8DA2E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5B6FA21FCE030500D8DA2E /* GamePresenter.swift */; };
 		BA689BFF1EF23CBA009B73BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */; };
 		BA689C011EF23CBA009B73BE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C001EF23CBA009B73BE /* StartViewController.swift */; };
 		BA689C041EF23CBA009B73BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA689C021EF23CBA009B73BE /* Main.storyboard */; };
@@ -15,11 +19,16 @@
 		BA689C091EF23CBA009B73BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA689C071EF23CBA009B73BE /* LaunchScreen.storyboard */; };
 		BA689C141EF23CBA009B73BE /* ImitateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C131EF23CBA009B73BE /* ImitateTests.swift */; };
 		BA689C1F1EF23FC7009B73BE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA689C1E1EF23FC7009B73BE /* GameViewController.swift */; };
+		BA73E92A1FC5D82400912FF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA73E9291FC5D82300912FF4 /* GoogleService-Info.plist */; };
 		BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */; };
-		BABC07E81FA81A32001287CA /* ZKModalStatusTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */; };
-		BABC07E91FA81A32001287CA /* ZKModalStatusTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA958A341FCC60CF0036C69E /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA958A331FCC60CF0036C69E /* DataLayer.swift */; };
 		BABFB67C1F0C49EE0097A69A /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABFB67B1F0C49EE0097A69A /* NavViewController.swift */; };
+		BACFCD0C1FCDEB6600BBAB07 /* ModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFCD0B1FCDEB6600BBAB07 /* ModelLayer.swift */; };
+		BACFCD0F1FCDECCC00BBAB07 /* LeaderboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFCD0E1FCDECCC00BBAB07 /* LeaderboardPresenter.swift */; };
 		BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */; };
+		BAEA30D81FCC8AAF00F0AEC1 /* UserScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA30D71FCC8AAF00F0AEC1 /* UserScore.swift */; };
+		E29ED2E79441386DC204E548 /* Pods_ImitateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7327874C3BC71F576D2C59 /* Pods_ImitateTests.framework */; };
+		E408F3A7E9DF09FF494A4AD5 /* Pods_Imitate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BCD7E2527D7C5B2FB34AC5 /* Pods_Imitate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,27 +39,6 @@
 			remoteGlobalIDString = BA689BFA1EF23CBA009B73BE;
 			remoteInfo = Imitate;
 		};
-		BABC07E11FA81962001287CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BABC07BE1FA81307001287CA;
-			remoteInfo = ZKModalStatusTest;
-		};
-		BABC07E31FA81962001287CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BABC07C71FA81307001287CA;
-			remoteInfo = ZKModalStatusTestTests;
-		};
-		BABC07EA1FA81A32001287CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BABC07BD1FA81307001287CA;
-			remoteInfo = ZKModalStatusTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BABC07E91FA81A32001287CA /* ZKModalStatusTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +55,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AB7C5A48C422CD60F66BFC0 /* Pods-ImitateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImitateTests/Pods-ImitateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B90EB56CE9589BABBDBA1EB /* Pods-ImitateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImitateTests/Pods-ImitateTests.release.xcconfig"; sourceTree = "<group>"; };
+		5CD53E3E65CD51AAA10B7AB0 /* Pods-Imitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Imitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Imitate/Pods-Imitate.debug.xcconfig"; sourceTree = "<group>"; };
+		70BCD7E2527D7C5B2FB34AC5 /* Pods_Imitate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Imitate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0347E382F18FC2E45611401 /* Pods-Imitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Imitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Imitate/Pods-Imitate.release.xcconfig"; sourceTree = "<group>"; };
+		AE7327874C3BC71F576D2C59 /* Pods_ImitateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2B0E921FCCA5AF00FACFBE /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
+		BA3B19BE1FC5DF3F00ED9D5B /* ZKModalStatusTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZKModalStatusTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3B19C01FC5F6EA00ED9D5B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BA3B19C21FC6148600ED9D5B /* CustomAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthPickerViewController.swift; sourceTree = "<group>"; };
+		BA5B6FA21FCE030500D8DA2E /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 		BA689BFB1EF23CBA009B73BE /* Imitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA689C001EF23CBA009B73BE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +78,14 @@
 		BA689C131EF23CBA009B73BE /* ImitateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImitateTests.swift; sourceTree = "<group>"; };
 		BA689C151EF23CBA009B73BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA689C1E1EF23FC7009B73BE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BA73E9291FC5D82300912FF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
-		BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZKModalStatusTest.xcodeproj; path = ../../../Frameworks/Test/ZKModalStatusTest/ZKModalStatusTest.xcodeproj; sourceTree = "<group>"; };
+		BA958A331FCC60CF0036C69E /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		BABFB67B1F0C49EE0097A69A /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		BACFCD0B1FCDEB6600BBAB07 /* ModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLayer.swift; sourceTree = "<group>"; };
+		BACFCD0E1FCDECCC00BBAB07 /* LeaderboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardPresenter.swift; sourceTree = "<group>"; };
 		BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIOutlinedLabel.swift; sourceTree = "<group>"; };
+		BAEA30D71FCC8AAF00F0AEC1 /* UserScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABC07E81FA81A32001287CA /* ZKModalStatusTest.framework in Frameworks */,
+				E408F3A7E9DF09FF494A4AD5 /* Pods_Imitate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,27 +101,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29ED2E79441386DC204E548 /* Pods_ImitateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA39A1A11F115490001A4608 /* Views */ = {
+		3A3B9E5A3624612A16BF2480 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CD53E3E65CD51AAA10B7AB0 /* Pods-Imitate.debug.xcconfig */,
+				A0347E382F18FC2E45611401 /* Pods-Imitate.release.xcconfig */,
+				3AB7C5A48C422CD60F66BFC0 /* Pods-ImitateTests.debug.xcconfig */,
+				5B90EB56CE9589BABBDBA1EB /* Pods-ImitateTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C74B7555C6772E751E1B1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA3B19BE1FC5DF3F00ED9D5B /* ZKModalStatusTest.framework */,
+				70BCD7E2527D7C5B2FB34AC5 /* Pods_Imitate.framework */,
+				AE7327874C3BC71F576D2C59 /* Pods_ImitateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA39A1A11F115490001A4608 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				BA39A1A21F1154B5001A4608 /* LeaderboardTableViewCell.swift */,
+				BA3B19C21FC6148600ED9D5B /* CustomAuthPickerViewController.swift */,
 			);
-			name = Views;
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		BA3B19BF1FC5F6D200ED9D5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA3B19C01FC5F6EA00ED9D5B /* UIViewController+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BA5B6FA11FCE02F200D8DA2E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				BA689C1E1EF23FC7009B73BE /* GameViewController.swift */,
+				BA5B6FA21FCE030500D8DA2E /* GamePresenter.swift */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 		BA689BF21EF23CBA009B73BE = {
 			isa = PBXGroup;
 			children = (
-				BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */,
 				BA689BFD1EF23CBA009B73BE /* Imitate */,
 				BA689C121EF23CBA009B73BE /* ImitateTests */,
 				BA689BFC1EF23CBA009B73BE /* Products */,
+				3A3B9E5A3624612A16BF2480 /* Pods */,
+				8C74B7555C6772E751E1B1B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,13 +178,15 @@
 		BA689BFD1EF23CBA009B73BE /* Imitate */ = {
 			isa = PBXGroup;
 			children = (
+				BACFCD0A1FCDEAEC00BBAB07 /* ModelLayer */,
 				BA689BFE1EF23CBA009B73BE /* AppDelegate.swift */,
 				BA689C051EF23CBA009B73BE /* Assets.xcassets */,
 				BA689C0A1EF23CBA009B73BE /* Info.plist */,
+				BA73E9291FC5D82300912FF4 /* GoogleService-Info.plist */,
 				BA8453EE1F0F31B800B3B995 /* Storyboards */,
 				BADBC2861EFE1204002BB1A9 /* Util */,
 				BA8453EF1F0F31D000B3B995 /* ViewControllers */,
-				BA39A1A11F115490001A4608 /* Views */,
+				BA39A1A11F115490001A4608 /* CustomViews */,
 			);
 			path = Imitate;
 			sourceTree = "<group>";
@@ -167,29 +212,49 @@
 		BA8453EF1F0F31D000B3B995 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA689C1E1EF23FC7009B73BE /* GameViewController.swift */,
-				BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */,
+				BA5B6FA11FCE02F200D8DA2E /* Game */,
+				BACFCD0D1FCDECAE00BBAB07 /* Leaderboard */,
 				BABFB67B1F0C49EE0097A69A /* NavViewController.swift */,
 				BA689C001EF23CBA009B73BE /* StartViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		BABC07DD1FA81962001287CA /* Products */ = {
+		BACFCD0A1FCDEAEC00BBAB07 /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
-				BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */,
-				BABC07E41FA81962001287CA /* ZKModalStatusTestTests.xctest */,
+				BA958A331FCC60CF0036C69E /* DataLayer.swift */,
+				BAEA30D61FCC8A8C00F0AEC1 /* Models */,
+				BACFCD0B1FCDEB6600BBAB07 /* ModelLayer.swift */,
 			);
-			name = Products;
+			name = ModelLayer;
+			sourceTree = "<group>";
+		};
+		BACFCD0D1FCDECAE00BBAB07 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				BA8453EC1F0F319D00B3B995 /* LeaderboardViewController.swift */,
+				BACFCD0E1FCDECCC00BBAB07 /* LeaderboardPresenter.swift */,
+			);
+			name = Leaderboard;
 			sourceTree = "<group>";
 		};
 		BADBC2861EFE1204002BB1A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BA3B19BF1FC5F6D200ED9D5B /* Extensions */,
 				BADBC2871EFE1228002BB1A9 /* UIOutlinedLabel.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		BAEA30D61FCC8A8C00F0AEC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA30D71FCC8AAF00F0AEC1 /* UserScore.swift */,
+				BA2B0E921FCCA5AF00FACFBE /* FirestoreModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,15 +264,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA689C181EF23CBA009B73BE /* Build configuration list for PBXNativeTarget "Imitate" */;
 			buildPhases = (
+				CB720D0394BCEFF9638DB32F /* [CP] Check Pods Manifest.lock */,
 				BA689BF71EF23CBA009B73BE /* Sources */,
 				BA689BF81EF23CBA009B73BE /* Frameworks */,
 				BA689BF91EF23CBA009B73BE /* Resources */,
 				BABC07EC1FA81A32001287CA /* Embed Frameworks */,
+				5E0F8F835A996DCB4C1A36E2 /* [CP] Embed Pods Frameworks */,
+				1C374EE53567564EF00D32D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BABC07EB1FA81A32001287CA /* PBXTargetDependency */,
 			);
 			name = Imitate;
 			productName = Imitate;
@@ -218,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA689C1B1EF23CBA009B73BE /* Build configuration list for PBXNativeTarget "ImitateTests" */;
 			buildPhases = (
+				E69CD3F61A59617F772B56B8 /* [CP] Check Pods Manifest.lock */,
 				BA689C0B1EF23CBA009B73BE /* Sources */,
 				BA689C0C1EF23CBA009B73BE /* Frameworks */,
 				BA689C0D1EF23CBA009B73BE /* Resources */,
+				E3E40B759D215B2F9B062EA0 /* [CP] Embed Pods Frameworks */,
+				2B8FC16547256AB7D4CAF13E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,7 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Zach Kobes";
 				TargetAttributes = {
 					BA689BFA1EF23CBA009B73BE = {
@@ -266,12 +336,6 @@
 			mainGroup = BA689BF21EF23CBA009B73BE;
 			productRefGroup = BA689BFC1EF23CBA009B73BE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BABC07DD1FA81962001287CA /* Products */;
-					ProjectRef = BABC07DC1FA81962001287CA /* ZKModalStatusTest.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				BA689BFA1EF23CBA009B73BE /* Imitate */,
@@ -280,29 +344,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		BABC07E21FA81962001287CA /* ZKModalStatusTest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ZKModalStatusTest.framework;
-			remoteRef = BABC07E11FA81962001287CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BABC07E41FA81962001287CA /* ZKModalStatusTestTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ZKModalStatusTestTests.xctest;
-			remoteRef = BABC07E31FA81962001287CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		BA689BF91EF23CBA009B73BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BA689C091EF23CBA009B73BE /* LaunchScreen.storyboard in Resources */,
+				BA73E92A1FC5D82400912FF4 /* GoogleService-Info.plist in Resources */,
 				BA689C061EF23CBA009B73BE /* Assets.xcassets in Resources */,
 				BA689C041EF23CBA009B73BE /* Main.storyboard in Resources */,
 			);
@@ -317,18 +365,172 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C374EE53567564EF00D32D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Imitate/Pods-Imitate-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Imitate/Pods-Imitate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B8FC16547256AB7D4CAF13E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImitateTests/Pods-ImitateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0F8F835A996DCB4C1A36E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Imitate/Pods-Imitate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Imitate/Pods-Imitate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB720D0394BCEFF9638DB32F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Imitate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E40B759D215B2F9B062EA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImitateTests/Pods-ImitateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69CD3F61A59617F772B56B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImitateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA689BF71EF23CBA009B73BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3B19C11FC5F6EA00ED9D5B /* UIViewController+Extension.swift in Sources */,
+				BA958A341FCC60CF0036C69E /* DataLayer.swift in Sources */,
 				BA689C011EF23CBA009B73BE /* StartViewController.swift in Sources */,
 				BABFB67C1F0C49EE0097A69A /* NavViewController.swift in Sources */,
+				BAEA30D81FCC8AAF00F0AEC1 /* UserScore.swift in Sources */,
+				BA3B19C31FC6148600ED9D5B /* CustomAuthPickerViewController.swift in Sources */,
 				BA689C1F1EF23FC7009B73BE /* GameViewController.swift in Sources */,
 				BADBC2881EFE1228002BB1A9 /* UIOutlinedLabel.swift in Sources */,
+				BA5B6FA31FCE030500D8DA2E /* GamePresenter.swift in Sources */,
 				BA8453ED1F0F319D00B3B995 /* LeaderboardViewController.swift in Sources */,
 				BA689BFF1EF23CBA009B73BE /* AppDelegate.swift in Sources */,
+				BACFCD0F1FCDECCC00BBAB07 /* LeaderboardPresenter.swift in Sources */,
 				BA39A1A31F1154B5001A4608 /* LeaderboardTableViewCell.swift in Sources */,
+				BACFCD0C1FCDEB6600BBAB07 /* ModelLayer.swift in Sources */,
+				BA2B0E931FCCA5AF00FACFBE /* FirestoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,11 +549,6 @@
 			isa = PBXTargetDependency;
 			target = BA689BFA1EF23CBA009B73BE /* Imitate */;
 			targetProxy = BA689C101EF23CBA009B73BE /* PBXContainerItemProxy */;
-		};
-		BABC07EB1FA81A32001287CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZKModalStatusTest;
-			targetProxy = BABC07EA1FA81A32001287CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,7 +582,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -393,7 +592,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -435,7 +638,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -443,7 +648,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -470,12 +679,13 @@
 		};
 		BA689C191EF23CBA009B73BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD53E3E65CD51AAA10B7AB0 /* Pods-Imitate.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZSMYYZ8XQ8;
 				INFOPLIST_FILE = Imitate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.Imitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,12 +695,13 @@
 		};
 		BA689C1A1EF23CBA009B73BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0347E382F18FC2E45611401 /* Pods-Imitate.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZSMYYZ8XQ8;
 				INFOPLIST_FILE = Imitate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.game.Imitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +711,7 @@
 		};
 		BA689C1C1EF23CBA009B73BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AB7C5A48C422CD60F66BFC0 /* Pods-ImitateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +727,7 @@
 		};
 		BA689C1D1EF23CBA009B73BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B90EB56CE9589BABBDBA1EB /* Pods-ImitateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

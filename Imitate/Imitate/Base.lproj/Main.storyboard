@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3fq-gs-POh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3fq-gs-POh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,8 +24,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-gw-Xf5">
-                                <rect key="frame" x="116" y="300" width="143" height="67"/>
+                                <rect key="frame" x="112.5" y="298.5" width="150" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="KBJ-6U-1Vq"/>
+                                    <constraint firstAttribute="width" constant="150" id="UOY-4b-mHp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,23 +39,42 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIW-EV-NlQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="236"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="234.5"/>
                                 <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help" translatesAutoresizingMaskIntoConstraints="NO" id="jRX-WW-xWv">
+                                        <rect key="frame" x="323" y="20" width="32" height="32"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-Bq-DUu">
+                                        <rect key="frame" x="319" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="18d-6b-1A9"/>
+                                            <constraint firstAttribute="height" constant="40" id="OdT-Y7-qfY"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="helpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gj-oS-EKK"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imitate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vc-cB-n8e">
-                                        <rect key="frame" x="149.5" y="104" width="77.5" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <rect key="frame" x="137.5" y="168" width="100.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="9vc-cB-n8e" firstAttribute="centerY" secondItem="UIW-EV-NlQ" secondAttribute="centerY" id="hoe-aJ-Ft1"/>
+                                    <constraint firstItem="jRX-WW-xWv" firstAttribute="trailing" secondItem="WCv-Bq-DUu" secondAttribute="trailing" constant="-4" id="5N6-81-qYV"/>
+                                    <constraint firstItem="jRX-WW-xWv" firstAttribute="bottom" secondItem="WCv-Bq-DUu" secondAttribute="bottom" constant="-4" id="GH9-l7-FeG"/>
+                                    <constraint firstItem="WCv-Bq-DUu" firstAttribute="top" secondItem="UIW-EV-NlQ" secondAttribute="top" constant="16" id="Iw8-8k-Wg4"/>
+                                    <constraint firstItem="jRX-WW-xWv" firstAttribute="leading" secondItem="WCv-Bq-DUu" secondAttribute="leading" constant="4" id="Pwj-11-c2L"/>
+                                    <constraint firstItem="9vc-cB-n8e" firstAttribute="centerY" secondItem="UIW-EV-NlQ" secondAttribute="centerY" constant="70" id="hoe-aJ-Ft1"/>
+                                    <constraint firstAttribute="trailing" secondItem="WCv-Bq-DUu" secondAttribute="trailing" constant="16" id="m1f-o1-Y0A"/>
+                                    <constraint firstItem="jRX-WW-xWv" firstAttribute="top" secondItem="WCv-Bq-DUu" secondAttribute="top" constant="4" id="umW-vB-Su1"/>
                                     <constraint firstItem="9vc-cB-n8e" firstAttribute="centerX" secondItem="UIW-EV-NlQ" secondAttribute="centerX" id="yET-bW-mPJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glf-Ga-fAN">
-                                <rect key="frame" x="116" y="387" width="143" height="33.5"/>
+                                <rect key="frame" x="112.5" y="388.5" width="150" height="35"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                 <state key="normal" title="Leaderboard">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,16 +83,30 @@
                                     <segue destination="w4C-nI-Ry0" kind="show" id="oiG-Jw-V5L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-Jr-6K3">
+                                <rect key="frame" x="0.0" y="607" width="115" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HKZ-65-KdA"/>
+                                    <constraint firstAttribute="width" constant="115" id="R3k-sB-MvN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwg-8q-XC5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4Ha-Jr-6K3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1tm-iG-9dl"/>
                             <constraint firstItem="Eq0-gw-Xf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6HD-H8-UPG"/>
                             <constraint firstAttribute="trailing" secondItem="UIW-EV-NlQ" secondAttribute="trailing" id="6nM-Py-2NR"/>
-                            <constraint firstItem="Eq0-gw-Xf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="Hak-Jx-N6T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ha-Jr-6K3" secondAttribute="bottom" id="Iud-fw-UuV"/>
                             <constraint firstItem="UIW-EV-NlQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JDx-Fe-Nsh"/>
                             <constraint firstItem="UIW-EV-NlQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LXO-VA-Wg6"/>
                             <constraint firstItem="Glf-Ga-fAN" firstAttribute="width" secondItem="Eq0-gw-Xf5" secondAttribute="width" id="eLG-I3-xtJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eq0-gw-Xf5" secondAttribute="bottom" constant="300" id="eUG-YZ-qxL"/>
                             <constraint firstItem="Glf-Ga-fAN" firstAttribute="height" secondItem="Eq0-gw-Xf5" secondAttribute="height" multiplier="1:2" id="h1w-ux-JsT"/>
                             <constraint firstItem="Eq0-gw-Xf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iog-Gk-XsE"/>
                             <constraint firstItem="Eq0-gw-Xf5" firstAttribute="top" secondItem="UIW-EV-NlQ" secondAttribute="bottom" id="kEq-un-67Z"/>
@@ -79,6 +116,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="w1D-dD-tlQ"/>
                     <connections>
+                        <outlet property="helpButton" destination="WCv-Bq-DUu" id="pyh-hh-ap7"/>
+                        <outlet property="leaderboardButton" destination="Glf-Ga-fAN" id="sek-3K-cSZ"/>
                         <outlet property="startButton" destination="Eq0-gw-Xf5" id="L6T-Bj-Z4I"/>
                     </connections>
                 </viewController>
@@ -98,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD4-Mh-a0n">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD4-Mh-a0n">
                                 <rect key="frame" x="0.0" y="64" width="187.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="f4E-el-0e8"/>
@@ -167,8 +206,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="date" destination="jKB-PB-K3L" id="lys-SC-Cw6"/>
                                             <outlet property="level" destination="E5U-y9-efA" id="5J9-mt-qk0"/>
+                                            <outlet property="name" destination="jKB-PB-K3L" id="lys-SC-Cw6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -302,10 +341,10 @@
         <!--Nav View Controller-->
         <scene sceneID="cep-I5-JB3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3fq-gs-POh" customClass="NavViewController" customModule="Imitate" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GameStart" automaticallyAdjustsScrollViewInsets="NO" id="3fq-gs-POh" customClass="NavViewController" customModule="Imitate" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZs-tj-7fS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -318,4 +357,7 @@
             <point key="canvasLocation" x="0.80000000000000004" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="help" width="250" height="250"/>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ZKModalStatusTest
+import Firebase
 
 class GameViewController: UIViewController {
 
@@ -26,9 +26,11 @@ class GameViewController: UIViewController {
     let maxAmount = 1000
     var nextIndex = 0
     let userDefaults = UserDefaults.standard
+    let presenter = GamePresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.setView(view: self)
         loadPatterns()
         prepareLabels()
         navigationItem.title = "Good Luck."
@@ -52,26 +54,11 @@ class GameViewController: UIViewController {
         }
     }
     
-    private func getBtn(number: Int) -> UIButton {
-        switch number {
-        case 1:
-            return btn1
-        case 2:
-            return btn2
-        case 3:
-            return btn3
-        case 4:
-            return btn4
-        default:
-            return btn1
-        }
-    }
-    
     private func prepareLabels() {
         yourTurnLabel.alpha = 0
         yourTurnLabel.transform = smallLabelTransform
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         startGame()
     }
@@ -85,7 +72,7 @@ class GameViewController: UIViewController {
             })
         }
     }
-    
+
     private func animatePattern(pattern: [UIButton]) {
         userPlaying = false
         userBtnPresses = []
@@ -97,6 +84,21 @@ class GameViewController: UIViewController {
                 })
             })
         })
+    }
+    
+    private func getBtn(number: Int) -> UIButton {
+        switch number {
+        case 1:
+            return btn1
+        case 2:
+            return btn2
+        case 3:
+            return btn3
+        case 4:
+            return btn4
+        default:
+            return btn1
+        }
     }
     
     private func animateLabel(text: String, innerColor: UIColor, complete: @escaping (_ result: Bool) -> Void) {
@@ -209,27 +211,9 @@ class GameViewController: UIViewController {
         self.btn3.alpha = 0
         self.btn4.alpha = 0
         disableBtns()
-        self.animateLabel(text: "Failure!", innerColor: UIColor.white, complete: {_ in})
-        
-//        let modalView = ZKModalStatusView(frame: self.view.bounds)
-//        modalView.set(image: #imageLiteral(resourceName: "trophy"))
-//        modalView.set(headline: "Congrats")
-//        modalView.set(subheading: "You've got a new high score!")
-//        view.addSubview(modalView)
-
-        UIView.animate(withDuration: 1.5, delay: 2, animations: {
-            self.view.backgroundColor = UIColor.blue
-        }, completion: {_ in
-            var leaderboardDict = [String : Int]()
-            if let array = self.userDefaults.dictionary(forKey: "Leaderboard") as? [String : Int] {
-                leaderboardDict = array
-            }
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MM/dd/yyyy h:mma"
-            let currentDate = formatter.string(from: Date())
-            leaderboardDict[currentDate] = self.nextIndex
-            self.userDefaults.set(leaderboardDict, forKey: "Leaderboard")
-            complete(true)
+        self.animateLabel(text: "Failure!", innerColor: UIColor.red, complete: {_ in
+            self.presenter.saveScore(score: self.nextIndex)
+            self.navigationController?.popViewController(animated: true)
         })
     }
     
@@ -245,5 +229,13 @@ class GameViewController: UIViewController {
         btn2.isEnabled = true
         btn3.isEnabled = true
         btn4.isEnabled = true
+    }
+}
+
+extension GameViewController: GameView {
+    func scoreSaved(error: Error?) {
+        if let error = error {
+            print(error.localizedDescription)
+        }
     }
 }

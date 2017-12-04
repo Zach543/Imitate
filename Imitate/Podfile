@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+use_frameworks!
+
+target ‘Imitate’ do
+pod 'IQKeyboardManagerSwift', '5.0.0'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'FirebaseUI'
+pod 'PopupDialog'
+pod 'Instructions'
+end
+
+target ‘ImitateTests' do
+end
