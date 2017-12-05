@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Instructions
 
 class GameViewController: UIViewController {
 
@@ -27,13 +28,27 @@ class GameViewController: UIViewController {
     var nextIndex = 0
     let userDefaults = UserDefaults.standard
     let presenter = GamePresenter()
-    
+    var showTutorial = false
+    let coachMarksController = CoachMarksController()
+    let gameHint = "Copy the flashed pattern when it is your turn."
+    let nextButtonText = "Ok"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.setView(view: self)
+        setupCoachMarks()
         loadPatterns()
         prepareLabels()
         navigationItem.title = "Good Luck."
+    }
+    
+    private func setupCoachMarks() {
+        coachMarksController.dataSource = self
+        coachMarksController.delegate = self
+        let skipView = CoachMarkSkipDefaultView()
+        skipView.setTitle("Skip", for: .normal)
+        coachMarksController.skipView = skipView
+        coachMarksController.overlay.allowTap = true
     }
     
     private func loadPatterns() {
@@ -60,7 +75,11 @@ class GameViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        startGame()
+        if showTutorial {
+            coachMarksController.start(on: self)
+        } else {
+            startGame()
+        }
     }
     
     private func startGame() {
@@ -239,3 +258,52 @@ extension GameViewController: GameView {
         }
     }
 }
+
+extension GameViewController: CoachMarksControllerDataSource, CoachMarksControllerDelegate {
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
+        
+        switch(index) {
+        case 0:
+            coachViews.bodyView.hintLabel.text = self.gameHint
+            coachViews.bodyView.nextLabel.text = self.nextButtonText
+        default: break
+        }
+        
+        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkAt index: Int) -> CoachMark {
+        switch(index) {
+        case 0:
+            return coachMarksController.helper.makeCoachMark(for: btn1)
+        default:
+            return coachMarksController.helper.makeCoachMark()
+        }
+    }
+    
+    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
+        return 1
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, constraintsForSkipView skipView: UIView, inParent parentView: UIView) -> [NSLayoutConstraint]? {
+        var constraints: [NSLayoutConstraint] = []
+        
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-100-[skipView]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
+        
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[skipView(==44)]-32-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
+        
+        return constraints
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, didHide coachMark: CoachMark, at index: Int) {
+        if index == 1 {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+

@@ -27,6 +27,7 @@ class StartViewController: UIViewController {
     let leaderboardHint = "Click leaderboard to view a global leaderboard."
     let helpHint = "Click this icon to view this tutorial again."
     let nextButtonText = "Ok"
+    var showGameTutorial = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class StartViewController: UIViewController {
     
     private func setupCoachMarks() {
         coachMarksController.dataSource = self
+        coachMarksController.delegate = self
         let skipView = CoachMarkSkipDefaultView()
         skipView.setTitle("Skip", for: .normal)
         coachMarksController.skipView = skipView
@@ -145,6 +147,8 @@ class StartViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        let vc: GameViewController = segue.destination as! GameViewController
+        vc.showTutorial = self.showGameTutorial
     }
     
     private func logOut() {
@@ -159,14 +163,16 @@ class StartViewController: UIViewController {
             self.showLoginView(authVC: authVC)
         }
     }
-    
+        
     @IBAction func logoutPressed(_ sender: Any) {
         logOut()
     }
     
     @IBAction func helpButtonPressed(_ sender: Any) {
         coachMarksController.start(on: self)
+        showGameTutorial = true
     }
+    
 }
 
 extension StartViewController: FUIAuthDelegate {
@@ -176,6 +182,7 @@ extension StartViewController: FUIAuthDelegate {
         } else if let _ = user {
             dataLayer.token = user?.uid
             coachMarksController.start(on: self)
+            showGameTutorial = true
         }
     }
     
@@ -227,13 +234,18 @@ extension StartViewController: CoachMarksControllerDataSource, CoachMarksControl
 
         constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|-100-[skipView]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
 
-        if UIApplication.shared.isStatusBarHidden {
-            constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|[skipView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
-        } else {
-            constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[skipView(==44)]-32-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
-        }
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:[skipView(==44)]-32-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["skipView": skipView]))
 
         return constraints
     }
     
+    func coachMarksController(_ coachMarksController: CoachMarksController, didHide coachMark: CoachMark, at index: Int) {
+        if index == 3 {
+            performSegue(withIdentifier: "startToGame", sender: self)
+        }
+    }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, didEndShowingBySkipping skipped: Bool) {
+        showGameTutorial = false
+    }
 }
